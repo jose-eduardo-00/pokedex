@@ -2,7 +2,7 @@ import TypeOptions from "./typeOptions/typeOptions";
 
 export default function TypeFilter() {
     return (
-        <div className="py-2 px-4 bg-slate-200 rounded-lg relative">
+        <div className="py-2 px-4 bg-slate-200 rounded-lg relative cursor-pointer">
             <h1>Tipos</h1>
             <div className="hidden absolute z-10 -left-28 bg-slate-100 w-80 p-4 flex flex-col items-center gap-4 rounded-xl">
                 <h1>Selecione um Tipo</h1>

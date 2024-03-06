@@ -2,7 +2,7 @@ import GenOptions from "./genOptions/genOptions";
 
 export default function GenFilter() {
     return (
-        <div className="py-2 px-4 bg-slate-200 rounded-lg relative">
+        <div className="py-2 px-4 bg-slate-200 rounded-lg relative cursor-pointer">
             <h1>Gerações</h1>
             <div className="hidden absolute -left-full bg-slate-100 w-80 p-4 flex flex-col items-center gap-4 rounded-xl">
                 <h1>Selecione uma Geração</h1>

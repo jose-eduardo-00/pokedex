@@ -1,6 +1,7 @@
 import Image from "next/image";
 import HeaderNav from "../ui/headerNav/headerNav";
 
+
 export default function Header({ page }: { page: string }) {
     return (
         <>
