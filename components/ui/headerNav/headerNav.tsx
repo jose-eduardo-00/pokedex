@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function HeaderNav() {
     return (
-        <ul className="flex align-middle justify-evenly p-4 border-b-2 border-black">
+        <ul className="flex align-middle justify-evenly p-4 bg-slate-700 text-white">
             <li><Link href={"/"}>Pokédex</Link></li>
             <li><Link href={"/movedex"}>Move Dex</Link></li>
             <li><Link href={"/abilitydex"}>Ability Dex</Link></li>

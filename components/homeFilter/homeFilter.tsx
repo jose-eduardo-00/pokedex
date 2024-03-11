@@ -4,7 +4,7 @@ import VersionFilter from "../ui/filters/versionFilter/versionFilter";
 
 export default function HomeFilter() {
     return (
-        <div className="flex items-center p-4 justify-evenly border-b-2 border-black">
+        <div className="flex items-center p-4 justify-evenly bg-slate-600">
             <VersionFilter />
             <GenFilter />
             <TypeFilter />

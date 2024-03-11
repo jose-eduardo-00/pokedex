@@ -6,7 +6,7 @@ import PokemonList from "@/components/pokemonList/pokemonList";
 export default function Home() {
     return (
         <>
-            <Header page={"Pokedex"} />
+            <Header page={"Pokédex"} />
             <HomeFilter />
             <PokemonList />
         </>

@@ -1,5 +1,5 @@
 import PokemonCard from "../ui/pokemonCard/pokemonCard"
-import getPokemons from "@/services/api";
+import { getPokemons } from "@/services/api";
 
 
 async function getPokemonList(getPoke: any) {
@@ -21,7 +21,7 @@ export default async function PokemonList() {
     const list = await getPokemonList(getPokeGen1)
 
     return (
-        <main className="flex justify-around gap-4 p-10 bg-slate-300 flex-wrap">
+        <main className="flex justify-around gap-4 p-10 bg-slate-200 flex-wrap">
             {list.map((e: any, index: number) => {
                 return (
                     <div key={index}>
