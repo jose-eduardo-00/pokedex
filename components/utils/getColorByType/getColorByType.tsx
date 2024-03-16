@@ -1,24 +1,52 @@
 export default function getColorByType(type: string) {
     switch (type) {
-        case 'grass': return 'bg-gradient-to-tr from-[#00ff00] via-[#00a940] to-[#00855f]'
-        case 'fire': return 'bg-gradient-to-tr from-[#ff0000] via-[#8b001c] to-[#6b002b]'
-        case 'water': return 'bg-gradient-to-tr from-[#0000ff] via-[#021bd7] to-[#0025b7]'
-        case 'normal': return 'bg-gradient-to-tr from-[#7e7e7e] via-[#9796ab] to-[#acabc0]'
-        case 'flying': return 'bg-gradient-to-tr from-[#5fd7f0] via-[#3da6bf] to-[#2884a3]'
-        case 'fighting': return 'bg-gradient-to-tr from-[#ff8000] via-[#fb6829] to-[#e3404d]'
-        case 'poison': return 'bg-gradient-to-tr from-[#8a2be2] via-[#7c33dd] to-[#623dd1]'
-        case 'electric': return 'bg-gradient-to-tr from-[#ffff00] via-[#ffdd0f] to-[#ff9e3b]'
-        case 'ground': return 'bg-gradient-to-tr from-[#996600] via-[#7c4914] to-[#753223]'
-        case 'rock': return 'bg-gradient-to-tr from-[#cc9900] via-[#a3621b] to-[#94402d]'
-        case 'psychic': return 'bg-gradient-to-tr from-[#ff3399] via-[#ad2371] to-[#82246a]'
-        case 'ice': return 'bg-gradient-to-tr from-[#5ff0f0] via-[#2ec4cd] to-[#009eb4]'
-        case 'bug': return 'bg-gradient-to-tr from-[#5ff05f] via-[#26c063] to-[#009d79]'
-        case 'ghost': return 'bg-gradient-to-tr from-[#6600ff] via-[#2a0a7c] to-[#13105e]'
-        case 'steel': return 'bg-gradient-to-tr from-[#669999] via-[#335557] to-[#1d4148]'
-        case 'dragon': return 'bg-gradient-to-tr from-[#0066ff] via-[#00398d] to-[#002d6d]'
-        case 'dark': return 'bg-gradient-to-tr from-[#49392f] via-[#281c18] to-[#261515]'
-        case 'fairy': return 'bg-gradient-to-tr from-[#ff66cc] via-[#e562c5] to-[#b358b4]'
-        default: return 'bg-white'
+        case "grass":
+            return "bg-gradient-to-tr from-[#00ff00] via-[#00a940] to-[#00855f]";
+        case "fire":
+            return "bg-gradient-to-tr from-[#ff0000] via-[#8b001c] to-[#6b002b]";
+        case "water":
+            return "bg-gradient-to-tr from-[#0000ff] via-[#021bd7] to-[#0025b7]";
+        case "normal":
+            return "bg-gradient-to-tr from-[#7e7e7e] via-[#9796ab] to-[#acabc0]";
+        case "flying":
+            return "bg-gradient-to-tr from-[#5fd7f0] via-[#3da6bf] to-[#2884a3]";
+        case "fighting":
+            return "bg-gradient-to-tr from-[#ff8000] via-[#fb6829] to-[#e3404d]";
+        case "poison":
+            return "bg-gradient-to-tr from-[#8a2be2] via-[#7c33dd] to-[#623dd1]";
+        case "electric":
+            return "bg-gradient-to-tr from-[#ffff00] via-[#ffdd0f] to-[#ff9e3b]";
+        case "ground":
+            return "bg-gradient-to-tr from-[#996600] via-[#7c4914] to-[#753223]";
+        case "rock":
+            return "bg-gradient-to-tr from-[#cc9900] via-[#a3621b] to-[#94402d]";
+        case "psychic":
+            return "bg-gradient-to-tr from-[#ff3399] via-[#ad2371] to-[#82246a]";
+        case "ice":
+            return "bg-gradient-to-tr from-[#5ff0f0] via-[#2ec4cd] to-[#009eb4]";
+        case "bug":
+            return "bg-gradient-to-tr from-[#5ff05f] via-[#26c063] to-[#009d79]";
+        case "ghost":
+            return "bg-gradient-to-tr from-[#6600ff] via-[#2a0a7c] to-[#13105e]";
+        case "steel":
+            return "bg-gradient-to-tr from-[#669999] via-[#335557] to-[#1d4148]";
+        case "dragon":
+            return "bg-gradient-to-tr from-[#0066ff] via-[#00398d] to-[#002d6d]";
+        case "dark":
+            return "bg-gradient-to-tr from-[#49392f] via-[#281c18] to-[#261515]";
+        case "fairy":
+            return "bg-gradient-to-tr from-[#ff66cc] via-[#e562c5] to-[#b358b4]";
+        // case 'status': return 'bg-gradient-to-tr from-[] via-[] to-[]'
+        case "status":
+            return "bg-slate-400";
+        // case 'physical': return 'bg-gradient-to-tr from-[] via-[] to-[]'
+        case "physical":
+            return "bg-red-600";
+        // case 'special': return 'bg-gradient-to-tr from-[] via-[] to-[]'
+        case "special":
+            return "bg-slate-800";
+        default:
+            return "bg-white";
     }
 }
 // case 'grass': return 'linear-gradient(to right top, #00ff00, #07ed09, #0ddc0f, #11cb13, #14ba15, #00a940, #009855, #00855f, #006b69, #004f66, #003354, #051937)'

@@ -17,7 +17,6 @@ async function getPokemonList(getPoke: any) {
 export default async function PokemonList() {
 
     const getPokeGen1 = await getPokemons(151, 0)
-
     const list = await getPokemonList(getPokeGen1)
 
     return (
