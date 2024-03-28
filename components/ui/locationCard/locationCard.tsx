@@ -1,3 +1,5 @@
+import nameFirstLetterUp from "@/components/utils/nameFirstLetterUp/nameFirstLetterUp";
+
 export default function LocationCard({
     location,
     areas,
@@ -15,20 +17,17 @@ export default function LocationCard({
         0
     );
 
-    const nameFirstLetterUp =
-        location.name.charAt(0).toUpperCase() + location.name.substring(1);
+    const locationName = nameFirstLetterUp(location)
 
     let regionFirstLetterUp;
     if (!location.region == false) {
-        regionFirstLetterUp =
-            location.region.name.charAt(0).toUpperCase() +
-            location.region.name.substring(1);
+        regionFirstLetterUp = nameFirstLetterUp(location.region)
     }
 
     return (
         <div className="flex flex-col items-center justify-evenly gap-2 rounded-lg shadow-md shadow-slate-700 w-96 h-28">
             <div className="flex items-baseline gap-2">
-                <h1 className="text-lg">{nameFirstLetterUp}</h1>
+                <h1 className="text-lg">{locationName}</h1>
                 <span className="text-sm">in</span>
                 <h2 className="text-base">{regionFirstLetterUp}</h2>
             </div>

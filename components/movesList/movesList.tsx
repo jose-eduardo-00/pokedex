@@ -1,20 +1,11 @@
 import MoveCard from "../ui/moveCard/moveCard";
 import { getMoves } from "@/services/api";
+import { getList } from "../utils/getList/getList";
 
-async function getMovesList(getMove: any) {
-    const get = Promise.all(
-        getMove.results.map(async (e: any) => {
-            const res = await fetch(`${e.url}`);
-            const data = await res.json();
-            return data;
-        })
-    );
-    return get;
-}
 
 export default async function MovesList() {
     const moves = await getMoves(937, 0);
-    const list = await getMovesList(moves);
+    const list = await getList(moves);
 
     return (
         <main className="flex flex-wrap items-center justify-around gap-5 p-10 bg-slate-200">

@@ -1,12 +1,12 @@
 import Image from "next/image";
 import HeaderNav from "../ui/headerNav/headerNav";
 import { getRandomPokemon } from "@/services/api";
+import nameFirstLetterUp from "../utils/nameFirstLetterUp/nameFirstLetterUp";
 
 export default async function Header({ page }: { page: string }) {
-
-    const randomNumber = parseInt((Math.random() * 1025).toString())
+    const randomNumber = parseInt((Math.random() * 1025).toString());
     const randomPokemon = await getRandomPokemon(randomNumber);
-    const nameFirstLetterUp = randomPokemon.name.charAt(0).toUpperCase() + randomPokemon.name.substring(1)
+    const pokemonName =  nameFirstLetterUp(randomPokemon)
 
     return (
         <>
@@ -19,7 +19,7 @@ export default async function Header({ page }: { page: string }) {
                         alt="imagem de um pokemon aleatório"
                         className="bg-slate-100 bg-opacity-50 rounded-full"
                     />
-                    <h1>{nameFirstLetterUp}</h1>
+                    <h1>{pokemonName}</h1>
                 </div>
                 <h1 className="text-5xl">{page}</h1>
                 <div>

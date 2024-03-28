@@ -1,23 +1,12 @@
 import PokemonCard from "../ui/pokemonCard/pokemonCard"
 import { getPokemons } from "@/services/api";
+import { getList } from "../utils/getList/getList";
 
-
-async function getPokemonList(getPoke: any) {
-
-    const get = Promise.all(
-        getPoke.results.map(async (e: any) => {
-            const res = await fetch(`${e.url}`)
-            const data = await res.json()
-            return data
-        })
-    )
-    return get
-}
 
 export default async function PokemonList() {
 
     const getPokeGen1 = await getPokemons(151, 0)
-    const list = await getPokemonList(getPokeGen1)
+    const list = await getList(getPokeGen1)
 
     return (
         <main className="flex justify-around gap-4 p-10 bg-slate-200 flex-wrap">
