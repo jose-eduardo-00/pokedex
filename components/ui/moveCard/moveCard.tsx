@@ -5,7 +5,7 @@ export default async function MoveCard({ move }: { move: any }) {
     const bgColorCategory = getColorByType(move.damage_class.name);
 
     return (
-        <div className="flex flex-col gap-2 rounded-lg shadow-md shadow-slate-700 w-96 text-md pb-2">
+        <div className="flex flex-col gap-2 rounded-lg shadow-md shadow-slate-700 w-96 text-base pb-2">
             <div className="flex flex-col gap-2">
                 <div className="grid grid-cols-5 text-center px-2 py-1 bg-slate-800 rounded-t-lg text-slate-100">
                     <h1 className="col-span-2">Name</h1>
