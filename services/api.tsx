@@ -49,3 +49,19 @@ export async function getNatures(limit: number, offset: number) {
     const data = await res.json();
     return data;
 }
+
+export async function getTypes(limit: number, offset: number) {
+    const res = await fetch(
+        `${baseUrl}type/?limit=${limit}&offset=${offset}`
+    );
+    const data = await res.json();
+    return data;
+
+}
+export async function getGenerations(limit: number, offset: number) {
+    const res = await fetch(
+        `${baseUrl}generation/?limit=${limit}&offset=${offset}`
+    );
+    const data = await res.json();
+    return data;
+}

@@ -36,6 +36,8 @@ export default function getColorByType(type: string) {
             return "bg-gradient-to-tr from-[#49392f] via-[#281c18] to-[#261515]";
         case "fairy":
             return "bg-gradient-to-tr from-[#ff66cc] via-[#e562c5] to-[#b358b4]";
+        case "shadow":
+            return "bg-gradient-to-tr from-[#4f00c3] via-[#13105e] to-[#001942]";
         // case 'status': return 'bg-gradient-to-tr from-[] via-[] to-[]'
         case "status":
             return "bg-slate-400";

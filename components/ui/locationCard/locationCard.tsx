@@ -17,11 +17,11 @@ export default function LocationCard({
         0
     );
 
-    const locationName = nameFirstLetterUp(location)
+    const locationName = nameFirstLetterUp(location);
 
     let regionFirstLetterUp;
     if (!location.region == false) {
-        regionFirstLetterUp = nameFirstLetterUp(location.region)
+        regionFirstLetterUp = nameFirstLetterUp(location.region);
     }
 
     return (

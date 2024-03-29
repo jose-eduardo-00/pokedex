@@ -1,5 +1,5 @@
-import { getLocations } from "@/services/api";
 import LocationCard from "../ui/locationCard/locationCard";
+import { getLocations } from "@/services/api";
 import { getList, pokemonEncountersList } from "../utils/getList/getList";
 
 
