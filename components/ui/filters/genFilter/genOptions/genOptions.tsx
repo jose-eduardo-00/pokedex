@@ -1,13 +1,11 @@
+import { generationEditor } from "@/components/utils/generationEditor/generationEditor";
+
 export default function GenOptions({ gen }: { gen: any }) {
-    // console.log(gen.name, gen.version_groups);
+    const generation = generationEditor(gen.name)
+
     return (
-        <div className="flex flex-col mb-2 cursor-pointer">
-            <h4 className="">{gen.name}</h4>
-            <div>
-                {gen.version_groups.map((e: any, index: number) => {
-                    return <span key={index}>{e.name}</span>;
-                })}
-            </div>
+        <div className="bg-slate-200 rounded-lg py-2 flex justify-center mb-2 cursor-pointer font-semibold">
+            <h4 className="">{generation}</h4>
         </div>
     );
 }

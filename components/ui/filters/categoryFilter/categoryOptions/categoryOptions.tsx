@@ -1,9 +1,15 @@
-export default function CategoryOptions() {
+import getColorByType from "@/components/utils/getColorByType/getColorByType";
+
+export default function CategoryOptions({ category }: { category: any }) {
+    const bgColor = getColorByType(category.name);
+
     return (
-        <li className="flex flex-col items-center gap-2 mb-2 cursor-pointer">
-            <div className="flex justify-center gap-2 w-full">
-                <span className="py-2 bg-slate-200 rounded-lg w-full flex justify-center">Exemplo</span>
-            </div>
-        </li>
-    )
+        <div className="flex justify-center gap-2 w-full">
+            <p
+                className={`py-2 ${bgColor} rounded-lg w-full flex justify-center text-slate-200 font-semibold`}
+            >
+                {category.name}
+            </p>
+        </div>
+    );
 }

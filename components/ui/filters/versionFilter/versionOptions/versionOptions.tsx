@@ -1,11 +1,22 @@
-export default function VersionOptions({ num }: { num: number }) {
+import { generationEditor } from "@/components/utils/generationEditor/generationEditor";
+
+export default function VersionOptions({ gen }: { gen: any }) {
+    const generation = generationEditor(gen.name);
     return (
-        <li className="flex flex-col items-center gap-2 mb-4">
-            <h4>Gen {num}</h4>
-            <div className="flex justify-center gap-2 w-full cursor-pointer">
-                <span className="py-2 bg-slate-200 rounded-lg w-full flex justify-center">Exemplo</span>
-                <span className="py-2 bg-slate-200 rounded-lg w-full flex justify-center">Exemplo</span>
+        <div className="flex flex-col items-center mb-4 border shadow-md rounded-lg gap-2 p-1">
+            <h4>{generation}</h4>
+            <div className="w-full flex flex-col gap-2 text-center font-semibold">
+                {gen.version_groups.map((e: any, index: number) => {
+                    return (
+                        <p
+                            key={index}
+                            className="w-full rounded-lg cursor-pointer bg-cyan-300"
+                        >
+                            {e.name}
+                        </p>
+                    );
+                })}
             </div>
-        </li>
-    )
+        </div>
+    );
 }
