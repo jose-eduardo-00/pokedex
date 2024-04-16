@@ -1,9 +1,10 @@
 import getColorByType from "@/components/utils/getColorByType/getColorByType";
 import nameFirstLetterUp from "@/components/utils/nameFirstLetterUp/nameFirstLetterUp";
 
+
 export default function TypeOptions({ type }: { type: any }) {
     const bgColor = getColorByType(type.name);
-    const typeName = nameFirstLetterUp(type)
+    const typeName = nameFirstLetterUp(type);
 
     return (
         <div className="flex justify-center gap-2 w-full">

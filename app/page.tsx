@@ -1,6 +1,8 @@
 import Header from "@/components/header/header";
 import HomeFilter from "@/components/homeFilter/homeFilter";
+import Loading from "@/components/pokemonList/loading";
 import PokemonList from "@/components/pokemonList/pokemonList";
+import { Suspense } from "react";
 
 
 export default function Home() {
@@ -8,7 +10,9 @@ export default function Home() {
         <>
             <Header page={"Pokédex"} />
             <HomeFilter />
-            <PokemonList />
+            <Suspense fallback={ <Loading /> }>
+                <PokemonList />
+            </Suspense>
         </>
     );
 }

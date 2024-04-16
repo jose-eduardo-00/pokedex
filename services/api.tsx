@@ -71,3 +71,11 @@ export async function getCategories(limit: number, offset: number) {
     const data = await res.json();
     return data;
 }
+
+export async function getPokemon(name: string) {
+    const res = await fetch(
+        `${baseUrl}pokemon/${name}`
+    );
+    const data = await res.json();
+    return data;
+}

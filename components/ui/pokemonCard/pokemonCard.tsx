@@ -32,7 +32,7 @@ export default async function PokemonCard({ pokemon }: { pokemon: any }) {
             </div>
             <div className="w-2/5 bg-opacity-50 bg-slate-300 rounded-l-full flex justify-end">
                 <Image
-                    src={pokemon.sprites.front_default}
+                    src={pokemon.sprites.other.home.front_default}
                     width={100}
                     height={100}
                     alt="Foto do pokemon"
