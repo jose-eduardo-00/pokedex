@@ -9,7 +9,7 @@ import {
 
 export default function FooterPokemonDetails({ name }: { name: string }) {
     return (
-        <footer className="fixed bottom-0 w-full flex flex-col items-center bg-slate-800 py-5">
+        <footer className="sticky bottom-0 z-10 w-full flex flex-col items-center bg-slate-800 py-5">
             <nav className="w-4/5">
                 <ul className="flex justify-evenly items-center text-white">
                     <Link href={`/${name}/pokemondetails/info`} className="flex flex-col items-center justify-center h-12">

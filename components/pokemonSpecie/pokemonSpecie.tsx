@@ -1,17 +1,15 @@
+import { getPokemonSpecie } from "@/services/api";
 import nameFirstLetterUp from "../utils/nameFirstLetterUp/nameFirstLetterUp";
 import { formatWeight, weightToPounds } from "./utils";
 
 export default async function PokemonSpecie({ pokemon }: { pokemon: any }) {
-    const res = await fetch(
-        `https://pokeapi.co/api/v2/pokemon-species/${pokemon.id}/`
-    );
-    const data = await res.json();
+    const pokemonSpecie = await getPokemonSpecie(pokemon.name)
 
-    const speciesText = data.flavor_text_entries.map((e: any) => {
+    const speciesText = pokemonSpecie.flavor_text_entries.map((e: any) => {
         if (
             e.language.name == "en" &&
             e.version.name ==
-                data.flavor_text_entries[data.flavor_text_entries.length - 1]
+                pokemonSpecie.flavor_text_entries[pokemonSpecie.flavor_text_entries.length - 1]
                     .version.name
         ) {
             return e.flavor_text;
@@ -19,7 +17,7 @@ export default async function PokemonSpecie({ pokemon }: { pokemon: any }) {
     });
 
     const gameVersion = nameFirstLetterUp(
-        data.flavor_text_entries[data.flavor_text_entries.length - 1].version
+        pokemonSpecie.flavor_text_entries[pokemonSpecie.flavor_text_entries.length - 1].version
     );
     const pokemonWeight = formatWeight(pokemon.weight);
     const pokemonWeightToPounds = weightToPounds(pokemonWeight);

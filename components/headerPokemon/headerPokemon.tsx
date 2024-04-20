@@ -1,14 +1,14 @@
 import { getPokemon } from "@/services/api";
-import PokemonImageHeader from "../ui/pokemonImageHeader/pokemonImageHeader";
+import PokemonImage from "../ui/pokemonImage/pokemonImage";
 import nameFirstLetterUp from "../utils/nameFirstLetterUp/nameFirstLetterUp";
 
 export default async function HeaderPokemon({ name }: { name: string }) {
     const pokemon = await getPokemon(name);
     const pokemonName = nameFirstLetterUp(pokemon);
-    // console.log(pokemon);
+
     return (
-        <header className="sticky top-0 flex justify-center items-center gap-4 px-6 py-2 bg-slate-800 text-white">
-            <PokemonImageHeader
+        <header className="sticky top-0 z-10 flex justify-center items-center gap-4 px-6 py-2 bg-slate-800 text-white">
+            <PokemonImage
                 src={pokemon.sprites.other.home.front_default}
                 name={pokemonName}
             />

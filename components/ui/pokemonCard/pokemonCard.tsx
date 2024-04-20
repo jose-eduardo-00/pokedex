@@ -2,7 +2,7 @@ import getColorByType from "@/components/utils/getColorByType/getColorByType";
 import nameFirstLetterUp from "@/components/utils/nameFirstLetterUp/nameFirstLetterUp";
 import Image from "next/image";
 
-export default async function PokemonCard({ pokemon }: { pokemon: any }) {
+export default function PokemonCard({ pokemon }: { pokemon: any }) {
     const bgColor = getColorByType(pokemon.types[0].type.name);
     const newNum = pokemon.id.toFixed().padStart(3, "0");
     const namePokemon = nameFirstLetterUp(pokemon);

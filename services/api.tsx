@@ -79,3 +79,27 @@ export async function getPokemon(name: string) {
     const data = await res.json();
     return data;
 }
+
+export async function getPokemonSpecie(name: string) {
+    const res = await fetch(
+        `${baseUrl}pokemon-species/${name}/`
+    );
+    const data = await res.json();
+    return data;
+}
+
+export async function getEvolutionChain(url: string) {
+    const res = await fetch(
+        `${url}`
+    );
+    const data = await res.json();
+    return data;
+}
+
+export async function getPokemonLocation(url: string) {
+    const res = await fetch(
+        `${url}`
+    );
+    const data = await res.json();
+    return data;
+}
