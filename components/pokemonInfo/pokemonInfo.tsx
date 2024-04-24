@@ -10,7 +10,7 @@ export default async function PokemonInfo({ name }: { name: string }) {
     const pokemon = await getPokemon(name);
 
     return (
-        <div className="flex flex-wrap items-center justify-around gap-2 pb-6">
+        <div className="flex flex-wrap items-center justify-around gap-x-4 gap-y-8 pb-6">
             <PokemonSpecie pokemon={pokemon} />
             <PokemonAbilityCard pokemon={pokemon} />
             <PokemonBaseStats pokemon={pokemon} />

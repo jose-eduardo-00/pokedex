@@ -15,7 +15,7 @@ export default async function PokemonEvolutionCard({
 
     return (
         <div
-            className={`${bgColor} min-w-28 rounded-lg shadow-md shadow-slate-700 cursor-pointer flex flex-col items-center gap-2`}
+            className={`${bgColor} min-h-56 min-w-28 rounded-lg shadow-md shadow-slate-700 cursor-pointer flex flex-col items-center gap-2`}
         >
             <div className="min-h-24 bg-opacity-50 bg-slate-300 rounded-b-full flex justify-center items-center w-full">
                 <Image
